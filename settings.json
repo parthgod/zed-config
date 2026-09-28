@@ -108,6 +108,26 @@
     "light": "Zed (Default)",
     "dark": "Zed (Default)"
   },
+  // Installed automatically on any machine this config syncs to.
+  "auto_install_extensions": {
+    "catppuccin": true,
+    "django": true,
+    "django-snippets": true,
+    "dockerfile": true,
+    "dracula": true,
+    "emmet": true,
+    "git-firefly": true,
+    "github-theme": true,
+    "html": true,
+    "log": true,
+    "macos-classic": true,
+    "nvim-nightfox": true,
+    "one-dark-pro": true,
+    "shadcn-mcp": true,
+    "tokyo-night": true,
+    "toml": true,
+    "vscode-dark-modern": true
+  },
   "base_keymap": "VSCode",
   "ui_font_size": 16,
   "buffer_font_size": 15.0,
