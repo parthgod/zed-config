@@ -1,0 +1,146 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  // Dirs Zed never scans/searches (prevents global-search from loading huge trees into RAM).
+  // NOTE: this replaces Zed's defaults, so the leading entries below re-list them.
+  "cli_default_open_behavior": "existing_window",
+  "file_scan_exclusions": [
+    // "**/.git",
+    "**/.svn",
+    "**/.hg",
+    "**/.jj",
+    "**/CVS",
+    "**/.DS_Store",
+    "**/Thumbs.db",
+    "**/.classpath",
+    // "**/.settings",
+    // "**/node_modules",
+    "**/venv",
+    "**/.venv",
+    "**/env",
+    // "**/__pycache__",
+    "**/.mypy_cache",
+    "**/.pytest_cache",
+    "**/.ruff_cache",
+    // "**/dist",
+    // "**/build",
+    // "**/.next",
+    "**/target",
+    "**/*.log"
+  ],
+  "terminal": {
+    "dock": "left",
+    "toolbar": {
+      "breadcrumbs": true
+    }
+  },
+  "markdown_preview": {
+    "max_width": 1600
+  },
+  "diagnostics": {
+    "inline": {
+      "enabled": true
+    }
+  },
+  "git": {
+    "diff_base": "head",
+    "inline_blame": {
+      "show_commit_summary": false
+    }
+  },
+  "minimap": {
+    "display_in": "all_editors",
+    "show": "always"
+  },
+  "project_panel": {
+    "dock": "right"
+  },
+  "outline_panel": {
+    "dock": "right"
+  },
+  "collaboration_panel": {
+    "dock": "right"
+  },
+  "agent": {
+    "dock": "left",
+    "favorite_models": [],
+    "model_parameters": []
+  },
+  "git_panel": {
+    "group_by": "staging",
+    "tree_view": true,
+    "dock": "right"
+  },
+  "context_servers": {
+    "shadcn-mcp-server": {
+      "enabled": true,
+      "remote": false,
+      "settings": {}
+    }
+  },
+  "edit_predictions": {
+    "provider": "copilot"
+  },
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  "linked_edits": true,
+  "agent_servers": {
+    "claude-acp": {
+      "default_config_options": {
+        "fast": false
+      },
+      "type": "registry"
+    },
+    "github-copilot-cli": {
+      "type": "registry"
+    }
+  },
+  "icon_theme": {
+    "mode": "dark",
+    "light": "Zed (Default)",
+    "dark": "Zed (Default)"
+  },
+  "base_keymap": "VSCode",
+  "ui_font_size": 16,
+  "buffer_font_size": 15.0,
+  "theme": {
+    "mode": "dark",
+    "light": "One Light",
+    "dark": "GitHub Dark",
+  },
+  "languages": {
+    "Python": {
+      "language_servers": ["!ruff", "!ty", "..."]
+    },
+    "Django": {
+      "language_servers": ["django-template-lsp", "!django-language-server", "..."]
+    }
+  },
+  "file_types": {
+    "Django": ["**/templates/**/*.html"]
+  },
+  "lsp": {
+    "basedpyright": {
+      "settings": {
+        "basedpyright": {
+          "analysis": {
+            "typeCheckingMode": "basic"
+          }
+        }
+      }
+    },
+    "django-template-lsp": {
+      "initialization_options": {
+        "env_directories": ["venv", ".venv", "env", ".env"]
+      }
+    }
+  }
+}

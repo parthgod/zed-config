@@ -1,0 +1,16 @@
+// Zed global tasks — the native equivalent of VS Code's "Code Runner".
+// Run the current file with Ctrl+Alt+N (bound in keymap.json),
+// or via the command palette: `task: spawn` → "Run current file".
+[
+  {
+    "label": "Run current file",
+    // Matches the file path with glob patterns, just like Code Runner's language map.
+    // Add / change languages by editing the case branches below.
+    // Only Zed's own $ZED_* variables are used — no bash ${...} expansion,
+    // because Zed resolves variables before the shell runs and rejects it.
+    "command": "case \"$ZED_FILE\" in *.py) python3 \"$ZED_FILE\";; *.js|*.mjs|*.cjs) node \"$ZED_FILE\";; *.ts) npx tsx \"$ZED_FILE\";; *.go) go run \"$ZED_FILE\";; *.rs) rustc \"$ZED_FILE\" -o /tmp/zed-run-out && /tmp/zed-run-out;; *.c) gcc \"$ZED_FILE\" -o /tmp/zed-run-out && /tmp/zed-run-out;; *.cpp|*.cc|*.cxx) g++ \"$ZED_FILE\" -o /tmp/zed-run-out && /tmp/zed-run-out;; *.java) cd \"$ZED_DIRNAME\" && javac \"$ZED_FILENAME\" && java \"$ZED_STEM\";; *.rb) ruby \"$ZED_FILE\";; *.sh|*.bash) bash \"$ZED_FILE\";; *.php) php \"$ZED_FILE\";; *) echo \"No runner configured for $ZED_FILENAME — add it in ~/.config/zed/tasks.json\";; esac",
+    "reveal": "always",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false
+  }
+]

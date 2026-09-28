@@ -1,0 +1,13 @@
+[
+  {
+    "context": "Editor",
+    "bindings": {
+      "shift-alt-up": "editor::DuplicateLineUp",
+      "shift-alt-down": "editor::DuplicateLineDown",
+      "ctrl-alt-n": ["task::Spawn", { "task_name": "Run current file" }],
+      "f6": "editor::ExpandAllDiffHunks",
+      "ctrl-k h": "editor::ToggleSelectedDiffHunks",
+      "f7": "git::FileHistory"
+    }
+  }
+]
