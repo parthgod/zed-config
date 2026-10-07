@@ -35,7 +35,7 @@
     "**/*.log"
   ],
   "terminal": {
-    "dock": "left",
+    "dock": "bottom",
     "toolbar": {
       "breadcrumbs": true
     }
